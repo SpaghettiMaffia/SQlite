@@ -46,7 +46,7 @@ def f2():
                  s.name as "Имя"
                  FROM student s
                  JOIN "group" g ON s.group_id = g.id
-                 WHERE g.name LIKE 'ЮРИ-404'
+                 WHERE g.name = 'ЮРИ-404'
                  ORDER BY s.surname''')
     
     col_names = [cn[0] for cn in curs.description]
@@ -473,4 +473,5 @@ func_register = {
     '12': f12,
     '13': f13,
     '14': f14
+
 }
